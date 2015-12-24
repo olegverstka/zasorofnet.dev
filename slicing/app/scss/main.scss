@@ -194,7 +194,7 @@ body {
     overflow: hidden;
 }
 .content {
-    padding: 0 0 0 250px;
+    padding: 0 0 0 351px;
 }
 
 
@@ -202,21 +202,82 @@ body {
 -----------------------------------------------------------------------------*/
 .left-sidebar {
     float: left;
-    width: 230px;
+    width: 269px;
+    padding: 0 33px 0 49px;
     margin-left: -100%;
     position: relative;
-    background: #B5E3FF;
+}
+.widget {
+    border-radius: 3px;
+    background-color: #1999BF;
+    background-image: -webkit-linear-gradient(bottom, #134967 0%, #1999BF 100%);
+    background-image: linear-gradient(to top, #134967 0%, #1999BF 100%);
+    -moz-border-radius: 3px;
+    margin: 0 0 30px 0;
+    h2 {
+        color: $bg_body;
+        font: 22px $font_bold;
+        text-align: center;
+        margin: 0;
+        border-radius: 3px 3px 14px 14px;
+        box-shadow: 2.5px 4.3px 10px rgba(13, 83, 29, 0.3);
+        background-color: #DB5B00;
+        background-image: -webkit-linear-gradient(bottom, #17AEDD 0%, #134967 100%);
+        background-image: linear-gradient(to top, #17AEDD 0%, #134967 100%);
+        text-transform: uppercase;
+    }
+    .widget-content {
+        ul {
+            list-style: none;
+            line-height: 12px;
+            margin: 0 18px 0 23px;
+            padding: 0;
+            li {
+                border-bottom: 1px solid $bg_body;
+                padding: 7px 0;
+                &:last-child {
+                    border-bottom: none;
+                }
+                a {
+                    color: $bg_body;
+                    font: 17px/24px $font_reg;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
 }
 
 
 /* Footer
 -----------------------------------------------------------------------------*/
 .footer {
-    width: 1280px;
-    margin: -225px auto 0;
-    height: 225px;
-    background: #BFF08E;
+    margin: -55px auto 0;
+    height: 55px;
+    background: #144c6a;
     position: relative;
+    .footer_wrap {
+        margin: 0 auto;
+        width: 1280px;
+        .left {
+            float: left;
+        }
+        .right {
+            float: right;
+        }
+        p {
+            color: $bg_body;
+            font: 14px $font_reg;
+            padding: 0 0 0 43px;
+        }
+        a {
+            color: $bg_body;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
 }
 
 @import "_helper.scss";
