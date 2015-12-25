@@ -79,8 +79,15 @@ body {
     height: auto !important;
     height: 100%;
 }
-
-
+p, li {
+    color: $color_text;
+    font: 16px $font_reg;
+}
+h1 {
+    color: $color_text;
+    font: 22px $font_bold;
+    text-transform: uppercase;
+}
 /* Header
 -----------------------------------------------------------------------------*/
 .header {
@@ -196,7 +203,41 @@ body {
 .content {
     padding: 0 0 0 351px;
 }
-
+.wrap-slider {
+    margin: 12px 0 0 0;
+    position: relative;
+    .bx-wrapper {
+        background: none;
+        border: 0;
+        box-shadow: none;
+        width: 830px;
+        .bxSlider {
+            margin: 0;
+            padding: 0;
+        }
+        .bx-controls-direction {
+            .bx-prev {
+                @include sprite($s-ico-1);
+                top: 150px;
+                left: -34px;
+            }
+            .bx-next {
+                @include sprite($s-ico-2);
+                top: 150px;
+                right: -34px;
+            }
+        }
+    }
+    .slider-border {
+        background: url("../img/slider_border.png") no-repeat scroll 0 0;
+        height: 356px;
+        left: 36px;
+        position: absolute;
+        top: -12px;
+        width: 857px;
+        z-index: 999;
+    }
+}
 
 /* Left Sidebar
 -----------------------------------------------------------------------------*/
