@@ -1,0 +1,1 @@
+jQuery(document).ready(function(){jQuery(".bxSlider").bxSlider({pager:!1,controls:!0,hideControlOnEnd:!1,nextText:"next",prevText:"Prev"})});
