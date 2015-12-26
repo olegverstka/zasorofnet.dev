@@ -21,7 +21,7 @@ $site_soc_ig = $templateparams->get('site_soc_ig');
 $doc = JFactory::getDocument();
 $doc->addStyleSheet(JUri::base().'templates/'.$doc->template.'/css/vendor.css');
 // Подключение скриптов шаблона
-$doc->addScript(JUri::base().'templates/'.$doc->template.'/js/vendor/modernizr.js');
+$doc->addScript(JUri::base().'templates/'.$doc->template.'/js/modernizr.js');
 $doc->addScript(JUri::base().'templates/'.$doc->template.'/js/vendor.js');
 $doc->addScript(JUri::base().'templates/'.$doc->template.'/js/main.js');
 
@@ -49,12 +49,6 @@ $defaultPage = $menu->getDefault()->id;
 					</a>
 				</div>
 				<nav class="main-menu">
-					<!-- <ul class="clearfix">
-						<li><a href="#">Прочистка труб</a></li>
-						<li><a href="#">О компании</a></li>
-						<li><a href="#">Технологии и оборудование</a></li>
-						<li><a href="#">Контакты</a></li>
-					</ul> -->
 					<jdoc:include type="modules" name="position-0" />
 				</nav>
 				<div class="contact">
@@ -67,60 +61,42 @@ $defaultPage = $menu->getDefault()->id;
 
 				<div class="container">
 					<main class="content">
-						<?php if($activePage != $defaultPage): //если не главная страница?>
-							<div class="wisiwig">
-								<jdoc:include type="component" />
-							</div>
-						<?php else: // если главная страница?>
-							<div class="wrap-slider">
-								<div class="slider-border"></div>
-								<ul class="bxSlider">
+						<div class="wrap-slider">
+							<div class="slider-border"></div>
+							<ul class="bxSlider">
+								<?php if($site_slider_1): ?>
+								<li>
 									<?php if($site_slider_1): ?>
-									<li>
-										<?php if($site_slider_1): ?>
-											<img src="<?php echo $site_slider_1; ?>" alt="">
-										<?php endif; ?>
-									</li>
+										<img src="<?php echo $site_slider_1; ?>" alt="">
 									<?php endif; ?>
+								</li>
+								<?php endif; ?>
+								<?php if($site_slider_2): ?>
+								<li>
 									<?php if($site_slider_2): ?>
-									<li>
-										<?php if($site_slider_2): ?>
-											<img src="<?php echo $site_slider_2; ?>" alt="">
-										<?php endif; ?>
-									</li>
+										<img src="<?php echo $site_slider_2; ?>" alt="">
 									<?php endif; ?>
+								</li>
+								<?php endif; ?>
+								<?php if($site_slider_3): ?>
+								<li>
 									<?php if($site_slider_3): ?>
-									<li>
-										<?php if($site_slider_3): ?>
-											<img src="<?php echo $site_slider_3; ?>" alt="">
-										<?php endif; ?>
-									</li>
+										<img src="<?php echo $site_slider_3; ?>" alt="">
 									<?php endif; ?>
+								</li>
+								<?php endif; ?>
+								<?php if($site_slider_4): ?>
+								<li>
 									<?php if($site_slider_4): ?>
-									<li>
-										<?php if($site_slider_4): ?>
-											<img src="<?php echo $site_slider_4; ?>" alt="">
-										<?php endif; ?>
-									</li>
+										<img src="<?php echo $site_slider_4; ?>" alt="">
 									<?php endif; ?>
-									<!-- <li><img src="img/slide-1.jpg" alt=""></li>
-									<li><img src="http://lorempixel.com/830/330/city/" alt=""></li>
-									<li><img src="http://lorempixel.com/830/330/city/" alt=""></li> -->
-								</ul>
-							</div>
-							<h1>Прочистка ливневой канализации</h1>
-							<div class="wisivig">
-								<!-- <p>Промывка осуществляется гидродинамическим методом, суть которого заключается в подаче воды под высоким давлением. Этот метод используется в большинстве случаев, потому, что пробку, которая образуется из песка и перекрывает трубу, удобнее и легче пробить с помощью воды.</p>
-								<p>Рекомендации:</p>
-								<p>Профилактические работы по очистке ливневой канализации проводятся:</p>
-								<ol>
-									<li>Осенью и весной- это период, когда выпадает максимальное количество осадков.</li>
-									<li>При запуске новых канализационных сетей или после проведения каких-либо строительных работ.</li>
-								</ol>
-								<p>Песок после прочистки не оседает и функции канализационной системы восстанавливаются.</p> -->
-								<jdoc:include type="component" />
-							</div>
-						<?php endif; ?>
+								</li>
+								<?php endif; ?>
+							</ul>
+						</div>
+						<div class="wisivig">
+							<jdoc:include type="component" />
+						</div>
 					</main><!-- .content -->
 				</div><!-- .container-->
 
@@ -128,14 +104,6 @@ $defaultPage = $menu->getDefault()->id;
 					<div class="widget">
 						<h2>Услуги</h2>
 						<div class="widget-content">
-							<!-- <ul>
-								<li><a href="#">Прочистка канализации</a></li>
-								<li><a href="#">Устранение засора</a></li>
-								<li><a href="#">Прочистка ливневой канализации</a></li>
-								<li><a href="#">Прочистка труб</a></li>
-								<li><a href="#">Прочистка систем трубопроводов</a></li>
-								<li><a href="#">Очистка производственных бытовых стоков</a></li>
-							</ul> -->
 							<jdoc:include type="modules" name="position-2" />
 						</div>
 					</div>
